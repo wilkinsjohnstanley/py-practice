@@ -5,14 +5,26 @@
 # IndexError - occurs when you try to access an index that is out of range
 # 1. try:
 # 2. except:
+# try:
+#     x = 1 / 0
+# except ZeroDivisionError:
+#     print("You can't divide by zero!")  
+# # 3. finally:
+# try:        
+#     x = 1 / 0
+# except ZeroDivisionError:
+#     print("You can't divide by zero!")  
+# finally:
+#     print("This will always be executed, regardless of whether an exception was raised or not.")
+    
 try:
-    x = 1 / 0
+    number = int(input("Enter a number: "))
+    print(1/number)
 except ZeroDivisionError:
-    print("You can't divide by zero!")  
-# 3. finally:
-try:        
-    x = 1 / 0
-except ZeroDivisionError:
-    print("You can't divide by zero!")  
+    print("You can't divide by zero!")
+except ValueError:
+    print("That's not a valid number!")
+except Exception:
+    print("An unexpected error occurred.")
 finally:
-    print("This will always be executed, regardless of whether an exception was raised or not.")
+    print("Thank you for using the program.")
